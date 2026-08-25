@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Editors and local agent state
+.idea/
+.vscode/
+.claude/
+.codex/
+
+# Generated evaluation outputs
+**/*-workspace/
+**/evals/outputs/
+**/feedback.json
+
+# Dependency and build output
+node_modules/
+dist/

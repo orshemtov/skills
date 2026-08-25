@@ -1,0 +1,44 @@
+{
+  "skill_name": "read-the-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We are starting a production FastAPI service with Pydantic and SQLAlchemy. Research the current recommended approach before proposing the repository layout and implementation plan.",
+      "expected_output": "A broad but decision-focused review grounded primarily in official project guidance, with relevant versions noted concisely and findings applied to the proposed project.",
+      "files": [],
+      "expectations": [
+        "The agent checks Context7 first for relevant documentation when it is available.",
+        "The research scope is broad enough to cover the interacting technologies and architecture decision.",
+        "Important recommendations are supported by authoritative primary sources.",
+        "Version relevance is checked without dominating the report.",
+        "The output ends in an applied recommendation rather than a documentation summary."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our existing Next.js canary app uses Cache Components. Find out whether a specific route should use use cache and explain the supported pattern.",
+      "expected_output": "A narrow investigation that inspects the local context, prefers the relevant official Next.js skill and documentation, and answers the concrete behavior without expanding into an ecosystem survey.",
+      "files": [],
+      "expectations": [
+        "The agent checks Context7 first for relevant documentation when it is available.",
+        "The research remains focused on the concrete Cache Components question.",
+        "The agent looks for project-authored agent guidance as well as official documentation.",
+        "The recommendation is tied to the app's actual configuration and route behavior.",
+        "Conflicting or version-sensitive guidance is disclosed."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "In plan mode, research whether we should adopt shadcn/ui for this existing React application, then make the necessary changes.",
+      "expected_output": "An authority-weighted, context-aware recommendation that stops after presenting the research and waits for confirmation before modifying the application.",
+      "files": [],
+      "expectations": [
+        "The agent checks Context7 first for relevant documentation when it is available.",
+        "The agent evaluates official shadcn guidance and the existing project context.",
+        "The report distinguishes authoritative evidence from secondary opinions.",
+        "The agent presents a recommendation with uncertainty and tradeoffs.",
+        "No implementation occurs before user confirmation because the task is in plan mode."
+      ]
+    }
+  ]
+}
