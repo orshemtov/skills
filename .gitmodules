@@ -2,7 +2,79 @@
 	path = vendor/impeccable
 	url = https://github.com/pbakaus/impeccable.git
 	branch = main
+	shallow = true
 [submodule "vendor/ponytail"]
 	path = vendor/ponytail
 	url = https://github.com/DietrichGebert/ponytail.git
 	branch = main
+	shallow = true
+[submodule "vendor/fastapi"]
+	path = vendor/fastapi
+	url = https://github.com/fastapi/fastapi.git
+	branch = master
+	shallow = true
+[submodule "vendor/shadcn"]
+	path = vendor/shadcn
+	url = https://github.com/shadcn-ui/ui.git
+	branch = main
+	shallow = true
+[submodule "vendor/aws-agent-toolkit-for-aws"]
+	path = vendor/aws-agent-toolkit-for-aws
+	url = https://github.com/aws/agent-toolkit-for-aws.git
+	branch = main
+	shallow = true
+[submodule "vendor/playwright-cli"]
+	path = vendor/playwright-cli
+	url = https://github.com/microsoft/playwright-cli.git
+	branch = main
+	shallow = true
+[submodule "vendor/vercel-agent-skills"]
+	path = vendor/vercel-agent-skills
+	url = https://github.com/vercel-labs/agent-skills.git
+	branch = main
+	shallow = true
+[submodule "vendor/supabase-agent-skills"]
+	path = vendor/supabase-agent-skills
+	url = https://github.com/supabase/agent-skills.git
+	branch = main
+	shallow = true
+[submodule "vendor/neon-agent-skills"]
+	path = vendor/neon-agent-skills
+	url = https://github.com/neondatabase/agent-skills.git
+	branch = main
+	shallow = true
+[submodule "vendor/pydantic-skills"]
+	path = vendor/pydantic-skills
+	url = https://github.com/pydantic/skills.git
+	branch = main
+	shallow = true
+[submodule "vendor/openai-plugins"]
+	path = vendor/openai-plugins
+	url = https://github.com/openai/plugins.git
+	branch = main
+	shallow = true
+[submodule "vendor/herdr"]
+	path = vendor/herdr
+	url = https://github.com/herdrdev/herdr.git
+	branch = master
+	shallow = true
+[submodule "vendor/pi-skills"]
+	path = vendor/pi-skills
+	url = https://github.com/badlogic/pi-skills.git
+	branch = main
+	shallow = true
+[submodule "vendor/anthropic-skills"]
+	path = vendor/anthropic-skills
+	url = https://github.com/anthropics/skills.git
+	branch = main
+	shallow = true
+[submodule "vendor/worktrunk"]
+	path = vendor/worktrunk
+	url = https://github.com/max-sixty/worktrunk.git
+	branch = main
+	shallow = true
+[submodule "vendor/mattpocock-skills"]
+	path = vendor/mattpocock-skills
+	url = https://github.com/mattpocock/skills.git
+	branch = main
+	shallow = true

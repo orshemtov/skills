@@ -16,12 +16,8 @@ Research enough to make the next decision with evidence. Match the depth to the 
 ## Gather authoritative evidence
 
 - Inspect enough local code and configuration to know which external guidance applies.
-- Use [references/source-authority.md](references/source-authority.md) to choose and compare sources.
-- Use Context7 first for documentation lookup when it is available.
-- Look for a project-authored agent skill or guidance and the official documentation. Read both when each adds useful context.
-- Go to the project's official documentation or source directly when Context7 lacks coverage, precision, provenance, or the required version.
+- Use [references/source-authority.md](references/source-authority.md) to choose, compare, and resolve conflicts between sources.
 - Verify important claims against primary sources. Cite the exact pages that support them.
-- Search further when sources conflict, appear stale, or do not cover the local constraints.
 
 ## Reach a decision
 
