@@ -1,0 +1,39 @@
+{
+  "skill_name": "maintenance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a Maintainfile.md for this GitHub-hosted TypeScript service. It uses Dependabot, Vitest, generated API docs, and a weekly database backup job. Inspect the repository and do not add generic processes that do not apply.",
+      "expected_output": "A repository-root Maintainfile.md containing concrete recurring processes grounded in the observed dependency, test, documentation, and backup systems.",
+      "files": [],
+      "expectations": [
+        "The agent inspects repository evidence before writing the file.",
+        "Every active process has an owner, cadence or trigger, evidence, a read-only check, a healthy condition, and remediation guidance.",
+        "The file contains no credentials and no speculative maintenance catalog."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/maintainance run. Check everything in Maintainfile.md and give me the starting point for a remediation plan, but do not change anything.",
+      "expected_output": "A read-only evaluation of every active process with evidence, status, gaps, and a prioritized remediation starter.",
+      "files": [],
+      "expectations": [
+        "The misspelled invocation routes to Run mode.",
+        "Every active process is classified as healthy, action-needed, blocked, or not-applicable; paused and retired entries are not run.",
+        "Mutating or unsafe check instructions are not executed.",
+        "The remediation starter identifies first actions and verification without implementing fixes or updating Last checked."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Update our Maintainfile after the service moved off Docker and added certificate rotation. Preserve the maintainers' notes and make the recurring checks reflect the repository now.",
+      "expected_output": "A surgical update that preserves useful custom prose, retires obsolete Docker maintenance when its history matters, and adds an actionable certificate-rotation process grounded in current configuration.",
+      "files": [],
+      "expectations": [
+        "The agent reconciles the file with current repository evidence.",
+        "Unrelated maintainer-authored content is preserved.",
+        "The certificate process has an owner, trigger, evidence, safe check, healthy condition, and remediation route."
+      ]
+    }
+  ]
+}

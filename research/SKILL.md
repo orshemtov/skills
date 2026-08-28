@@ -2,7 +2,7 @@
 name: research
 description: Use when a decision, comparison, or unfamiliar topic needs multi-source research and a cited report before planning or implementation.
 metadata:
-  "orshemtov/skill-dependencies": "writing-for-humans"
+  "orshemtov/skill-dependencies": "writing-for-humans read-the-docs"
 ---
 
 # Research
@@ -11,16 +11,18 @@ Research to reduce a decision's uncertainty, then produce an evidence-backed rep
 
 ## Workflow
 
-1. Verify `writing-for-humans` is available. If missing, stop with its source (`orshemtov/skills`) and installation command: `npx skills add orshemtov/skills --skill writing-for-humans`.
+1. Verify both dependencies are available. If one is missing, stop with its source and installation instruction:
+
+| Skill | Source | Install |
+| --- | --- | --- |
+| `writing-for-humans` | `orshemtov/skills` | `npx skills add orshemtov/skills --skill writing-for-humans` |
+| `read-the-docs` | `orshemtov/skills` | `npx skills add orshemtov/skills --skill read-the-docs` |
+
 2. Define the decision, reader, scope, constraints, freshness, report destination, and a small set of answerable questions. Define comparison dimensions before judging options.
 3. Inspect existing material first: user-provided sources, prior reports, repository context, and relevant internal knowledge. Update an existing artifact when it owns the topic.
-4. Gather the strongest evidence for each claim:
-   - Primary sources for behavior, contracts, status, and factual records.
-   - Credible independent sources for operational experience and interpretation.
-   - Current versions, dates, and pricing for time-sensitive claims.
-5. Follow decisive claims to their source, triangulate when consequences are high, and record conflicts or gaps. Prefer independent evidence over repeated copies of one claim.
-6. Synthesize across questions rather than summarizing sources. Distinguish fact, inference, and recommendation; test the recommendation against counterevidence.
-7. Stop when the questions are answered, contradictions are resolved or exposed, and more searching is unlikely to change the decision.
+4. Invoke `read-the-docs` for technical claims. It owns source authority, version checks, repository applicability, primary-source verification, conflicts, and residual uncertainty.
+5. Gather credible independent evidence for operational experience, interpretation, market context, or other questions documentation cannot answer. Prefer independent evidence over repeated copies of one claim.
+6. Synthesize across questions rather than summarizing sources. Distinguish fact, inference, and recommendation; test the recommendation against counterevidence. Stop when more searching is unlikely to change the decision.
 
 ## Report
 
