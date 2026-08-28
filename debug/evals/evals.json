@@ -1,0 +1,39 @@
+{
+  "skill_name": "debug",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our production API started timing out after today's deploy. Diagnose the root cause using this repository's Debugfile. Do not change code or production.",
+      "expected_output": "An evidence-backed, read-only RCA that loads relevant architecture and delivery context, correlates configured channels, and distinguishes confirmed from probable cause.",
+      "files": [],
+      "expectations": [
+        "The agent reads the nearest Debugfile.yml and relevant context before selecting evidence channels.",
+        "The agent uses configured provider skills and CLIs without mutating production.",
+        "The conclusion contains a causal chain, confidence classification, and residual uncertainty."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use /setup-debug for this service. Architecture is partly in docs/ and partly in Confluence; deployments and incidents are in GitHub. Create the Debugfile without storing any credentials.",
+      "expected_output": "A validated Debugfile.yml built from repository discovery and a bounded interview, using acli with Confluence guidance and gh with GitHub guidance.",
+      "files": [],
+      "expectations": [
+        "The agent inspects repository facts before asking the user questions.",
+        "The Debugfile pairs acli with the Confluence skill and gh with the GitHub skill.",
+        "Credential fields contain locators rather than secret values, and the validator is run."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "This intermittent worker bug only happens in production and we cannot reproduce it locally. Find the cause and fix it if the evidence is strong enough.",
+      "expected_output": "A safe investigation that improves the evidence loop, avoids manufacturing certainty, requests authorization before unscoped external mutation, and adds a regression test only at a valid seam.",
+      "files": [],
+      "expectations": [
+        "The agent uses captured or read-only runtime evidence when local reproduction is unavailable.",
+        "The agent labels unresolved or correlational findings as probable rather than confirmed.",
+        "Any fix is verified against the original symptom and a behavior-focused regression test."
+      ]
+    }
+  ]
+}
+

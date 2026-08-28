@@ -78,3 +78,13 @@
 	url = https://github.com/mattpocock/skills.git
 	branch = main
 	shallow = true
+[submodule "vendor/github-cli"]
+	path = vendor/github-cli
+	url = https://github.com/cli/cli.git
+	branch = trunk
+	shallow = true
+[submodule "vendor/prek"]
+	path = vendor/prek
+	url = https://github.com/j178/prek.git
+	branch = master
+	shallow = true

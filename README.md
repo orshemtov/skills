@@ -10,6 +10,11 @@ npx skills@latest add orshemtov/skills
 
 ## Skills
 
+- [`debug`](./debug) — Perform provider-neutral root-cause analysis using a repository `Debugfile.yml`.
+- [`setup-debug`](./setup-debug) — Discover and configure a project's debugging context and channels.
+- [`writing-for-humans`](./writing-for-humans) — Create concise, scannable documents for human readers.
+- [`research`](./research) — Investigate a decision and produce an evidence-backed report before planning or implementation.
+- [`plan`](./plan) — Turn software ideas into accepted solutions and implementation-ready plans.
 - [`read-the-docs`](./read-the-docs) — Research authoritative technical documentation before planning or implementation.
 
 ## Curated upstreams
@@ -20,6 +25,7 @@ npx skills@latest add orshemtov/skills
 - [Neon](https://github.com/neondatabase/agent-skills) — Official Neon and PostgreSQL workflows.
 - [OpenAI Developers](https://github.com/openai/plugins/tree/main/plugins/openai-developers) — Official OpenAI development skills.
 - [Playwright CLI](https://github.com/microsoft/playwright-cli) — Official browser automation skill.
+- [Prek](https://github.com/j178/prek) — Maintainer-owned pre-commit framework and Agent Skill.
 - [Ponytail](https://github.com/DietrichGebert/ponytail) — Minimal, YAGNI-oriented implementation and over-engineering review.
 - [Pydantic](https://github.com/pydantic/skills) — Official Pydantic, Pydantic AI, and Logfire skills.
 - [shadcn/ui](https://github.com/shadcn-ui/ui) — Official component, styling, and migration workflows.
