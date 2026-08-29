@@ -88,3 +88,8 @@
 	url = https://github.com/j178/prek.git
 	branch = master
 	shallow = true
+[submodule "vendor/openclaw-acpx"]
+	path = vendor/openclaw-acpx
+	url = https://github.com/openclaw/acpx.git
+	branch = main
+	shallow = true

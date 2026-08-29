@@ -1,8 +1,6 @@
 ---
 name: research
 description: Use when a decision, comparison, or unfamiliar topic needs multi-source research and a cited report before planning or implementation.
-metadata:
-  "orshemtov/skill-dependencies": "writing-for-humans read-the-docs"
 ---
 
 # Research
@@ -11,18 +9,11 @@ Research to reduce a decision's uncertainty, then produce an evidence-backed rep
 
 ## Workflow
 
-1. Verify both dependencies are available. If one is missing, stop with its source and installation instruction:
-
-| Skill | Source | Install |
-| --- | --- | --- |
-| `writing-for-humans` | `orshemtov/skills` | `npx skills add orshemtov/skills --skill writing-for-humans` |
-| `read-the-docs` | `orshemtov/skills` | `npx skills add orshemtov/skills --skill read-the-docs` |
-
-2. Define the decision, reader, scope, constraints, freshness, report destination, and a small set of answerable questions. Define comparison dimensions before judging options.
-3. Inspect existing material first: user-provided sources, prior reports, repository context, and relevant internal knowledge. Update an existing artifact when it owns the topic.
-4. Invoke `read-the-docs` for technical claims. It owns source authority, version checks, repository applicability, primary-source verification, conflicts, and residual uncertainty.
-5. Gather credible independent evidence for operational experience, interpretation, market context, or other questions documentation cannot answer. Prefer independent evidence over repeated copies of one claim.
-6. Synthesize across questions rather than summarizing sources. Distinguish fact, inference, and recommendation; test the recommendation against counterevidence. Stop when more searching is unlikely to change the decision.
+1. Define the decision, reader, scope, constraints, freshness, report destination, and a small set of answerable questions. Define comparison dimensions before judging options.
+2. Inspect existing material first: user-provided sources, prior reports, repository context, and relevant internal knowledge. Update an existing artifact when it owns the topic.
+3. Invoke `read-the-docs` for technical claims. It owns source authority, version checks, repository applicability, primary-source verification, conflicts, and residual uncertainty.
+4. Gather credible independent evidence for operational experience, interpretation, market context, or other questions documentation cannot answer. Prefer independent evidence over repeated copies of one claim.
+5. Synthesize across questions rather than summarizing sources. Distinguish fact, inference, and recommendation; test the recommendation against counterevidence. Stop when more searching is unlikely to change the decision.
 
 ## Report
 

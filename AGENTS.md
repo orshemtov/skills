@@ -2,11 +2,21 @@
 
 This repository is a personal library of Agent Skills: first-party skills we create, third-party skills we gather under `vendor/`, and skills installed for local use.
 
-## Before adding a skill
+## Skill lifecycle
 
-1. Define the task, trigger conditions, expected output, and success criteria.
-2. Use `find-skills` to search the ecosystem and inspect relevant existing skills.
-3. Choose the smallest ownership model that fits:
+1. **Frame** — Define the task, activation conditions, output, and success criteria.
+2. **Ground** — Read repository instructions, existing skills, and relevant constraints.
+3. **Discover** — Research maintained skills and authoritative guidance.
+4. **Decide** — Choose the smallest fit: reuse, vendor, adapt, route, create, or no skill.
+5. **Shape** — Keep common workflow in `SKILL.md`; route conditional detail to focused resources.
+6. **Minimize** — Apply progressive disclosure and Ponytail. Remove duplication, no-ops, and speculative machinery.
+7. **Evaluate** — Test realistic behavior and activation when it adds confidence; validate structure and discovery.
+8. **Promote** — Inspect the complete diff and publish only when the skill meets its success criteria.
+9. **Evolve** — Change skills from observed failures and repeated needs, not hypothetical flexibility.
+
+### Ownership decision
+
+Use `find-skills` to search the ecosystem and inspect relevant existing skills. Then choose the smallest ownership model that fits:
 
 | Finding | Action |
 | --- | --- |
@@ -40,18 +50,6 @@ Follow the [Agent Skills specification](https://agentskills.io/specification).
 - Preserve portability. Use agent-specific fields or instructions only when the skill requires them, and declare real environment requirements in `compatibility`.
 - A skill may be mostly routing or references when existing skills already own the execution details.
 
-### Skill dependencies
-
-Declare direct skill dependencies as one space-separated string:
-
-```yaml
-metadata:
-  "orshemtov/skill-dependencies": "research writing-for-humans tdd"
-```
-
-- Omit the field when the skill has no dependencies; do not list transitive dependencies.
-- Treat every listed skill as required. Before execution, verify it is available; when missing, stop and report its source and installation instruction.
-
 ## Progressive disclosure
 
 | Layer | Content | Rule |
@@ -71,15 +69,14 @@ Keep each meaning in one place. Move detail out of `SKILL.md` when it serves onl
 - Do not present a submodule as floating: the parent repository still records an exact commit.
 - If adaptation is needed, keep it in a root-level first-party skill and point to the vendored source only when that remains portable.
 
-## Review before completion
+## Evaluation and promotion checks
 
 - The workflow matches the stated trigger and success criteria.
 - The skill is not duplicating a maintained existing skill.
 - `SKILL.md` frontmatter follows the current Agent Skills specification.
 - Every referenced file exists, is reachable from `SKILL.md`, and has a clear load condition.
 - Scripts are self-contained or document dependencies, report useful errors, and handle relevant edge cases.
-- Objective behavior has focused evals when they add confidence.
-- `SKILL.md` has been trimmed with Ponytail: remove no-ops, duplication, speculative flexibility, and unnecessary resources.
+- Objective behavior has focused evals when they add confidence. If evals are part of the acceptance gate, run them; authored but unexecuted evals do not satisfy it.
 - Run the available skill validator and repository checks; report what actually ran and any residual uncertainty.
 
 Before committing a new or changed skill, inspect the complete diff, including untracked files, and confirm the skill remains self-contained and installable.

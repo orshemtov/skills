@@ -1,8 +1,6 @@
 ---
 name: plan
 description: Use for software idea exploration, solution planning, or turning an accepted software solution into an implementation-ready plan. Do not use for personal plans, direct implementation, or simple factual lookups.
-metadata:
-  "orshemtov/skill-dependencies": "research writing-for-humans tdd"
 ---
 
 # Plan
@@ -11,16 +9,8 @@ Turn a software idea into an accepted solution, then into work that is safe to i
 
 ## Start
 
-1. Verify the direct dependencies are available. If one is missing, stop with its source and installation instruction:
-
-| Skill | Source | Install |
-| --- | --- | --- |
-| `research` | `orshemtov/skills` | `npx skills add orshemtov/skills --skill research` |
-| `writing-for-humans` | `orshemtov/skills` | `npx skills add orshemtov/skills --skill writing-for-humans` |
-| `tdd` | `mattpocock/skills` | `npx skills add mattpocock/skills --skill tdd` |
-
-2. Use solution planning until the user accepts a solution. Use implementation planning only from an accepted solution.
-3. Keep drafts conversational. After acceptance, maintain one current-state artifact using the repository convention or `docs/plans/<slug>.md`. Invoke `writing-for-humans`; replace obsolete reasoning instead of narrating the document's history.
+1. Use solution planning until the user accepts a solution. Use implementation planning only from an accepted solution.
+2. Keep drafts conversational. After acceptance, maintain one current-state artifact using the repository convention or `docs/plans/<slug>.md`. Invoke `writing-for-humans`; replace obsolete reasoning instead of narrating the document's history.
 
 ## Solution planning
 
