@@ -1,6 +1,6 @@
 ---
 name: debug
-description: Diagnose software bugs, incidents, and performance regressions with root-cause analysis, or create and update a repository Debugfile.yml. Use project context and configured evidence channels to reproduce safely, test hypotheses, and, when authorized, implement and verify a regression-safe fix.
+description: Diagnose software bugs, incidents, and performance regressions with root-cause analysis, or create and update a repository Debugfile.md. Use project context and configured evidence channels to reproduce safely, test hypotheses, and, when authorized, implement and verify a regression-safe fix.
 ---
 
 # Debug
@@ -14,12 +14,12 @@ Find the causal chain behind the reported behavior. Treat a plausible code path 
 | Asks to create or update debugging configuration | Setup |
 | Reports broken, incorrect, failing, flaky, or slow behavior | Diagnose |
 
-Both modes use [references/debugfile.md](references/debugfile.md). Read its Setup section and use [assets/Debugfile.yml](assets/Debugfile.yml) only in Setup mode; otherwise read the discovery, routing, and safety sections as needed.
+Both modes use [references/debugfile.md](references/debugfile.md). Read its Setup section and use [assets/Debugfile.md](assets/Debugfile.md) only in Setup mode; otherwise read the discovery, routing, and safety sections as needed.
 
 ## Diagnose
 
 1. **Frame.** Record expected behavior, observed behavior, scope, environment, time window, and affected version. Keep facts, reports, and assumptions distinct.
-2. **Map.** Find the nearest `Debugfile.yml` by searching from the working directory toward the repository root. Validate it with `scripts/validate_debugfile.py`. Load only the context sources and channels relevant to the symptom. Without a Debugfile, continue with discoverable local evidence and report the missing project map.
+2. **Map.** Find the nearest `Debugfile.md` by searching from the working directory toward the repository root. Validate it with `scripts/validate_debugfile.py`. Load only the context sources and channels relevant to the symptom. Without a Debugfile, continue with discoverable local evidence and report the missing project map.
 3. **Reproduce.** Invoke `diagnosing-bugs` when available for its tight-loop discipline. Build the safest pass/fail loop that asserts the exact symptom. Prefer local or isolated environments. For a flaky bug, raise and measure the reproduction rate. If reproduction is unavailable, use captured artifacts or read-only runtime evidence and state the limitation.
 4. **Correlate.** Build a timeline across the relevant architecture, request or job identifiers, deployments, logs, traces, metrics, dependencies, and source changes. Documentation describes intended behavior; executable configuration and runtime evidence establish current behavior.
 5. **Probe.** Rank 3–5 falsifiable hypotheses. For each, state the prediction and choose the smallest probe that distinguishes it. Change one variable at a time and preserve the evidence.

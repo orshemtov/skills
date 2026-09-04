@@ -1,20 +1,20 @@
 # Debugfile
 
-`Debugfile.yml` is a repository-owned map of how to understand, observe, reproduce, and verify the system. Keep debugging method in the `debug` skill and provider mechanics in provider skills; the Debugfile only routes to them.
+`Debugfile.md` is a repository-owned map of how to understand, observe, reproduce, and verify the system. Its YAML frontmatter holds the structured routing contract; its Markdown body may hold project-specific debugging guidance. Keep debugging method in the `debug` skill and provider mechanics in provider skills; the Debugfile only routes to them.
 
 ## Discovery
 
-Search from the current directory upward and use the nearest `Debugfile.yml`. Resolve repository-relative paths from the directory containing that file. A closer Debugfile may specialize a monorepo subtree.
+Search from the current directory upward and use the nearest `Debugfile.md`. Resolve repository-relative paths from the directory containing that file. A closer Debugfile may specialize a monorepo subtree.
 
 Run:
 
 ```sh
-python3 <debug-skill>/scripts/validate_debugfile.py <path>/Debugfile.yml
+python3 <debug-skill>/scripts/validate_debugfile.py <path>/Debugfile.md
 ```
 
-The validator requires Python 3 and PyYAML. Treat warnings as freshness or portability work, not schema failure.
+The validator requires Python 3 and PyYAML. It validates the YAML frontmatter and leaves the Markdown body flexible. Treat warnings as freshness or portability work, not schema failure.
 
-## Top-level contract
+## Frontmatter contract
 
 | Field | Shape | Purpose |
 | --- | --- | --- |
@@ -198,6 +198,6 @@ Commands are project-owned entrypoints, not arbitrary generated shell. Preserve 
 1. Inspect repository facts before interviewing: root guidance, developer and architecture docs, ADRs, service manifests, build/test commands, CI/CD, infrastructure, migrations, telemetry libraries, runbooks, incident templates, installed skills, and available CLIs.
 2. Follow external references already named by the repository. Prefer established provider CLIs and pair each with its relevant skill.
 3. Ask only unresolved decisions in rounds, with a recommended conservative answer. Use `grilling` when available. Cover environment/account mappings, production access, correlation identifiers, credential locators, recovery signals, and bug-record destinations.
-4. Start from `assets/Debugfile.yml`. Preserve valid existing entries, write references rather than copied private documentation, and keep credential values out of the file.
+4. Start from `assets/Debugfile.md`. Preserve valid existing entries, write references rather than copied private documentation, and keep credential values out of the file.
 5. Validate the result. Resolve schema errors and likely inline secrets; report missing paths and unverified external references as warnings.
 6. Summarize discovered facts, user decisions, configured gaps, and the exact validation performed.

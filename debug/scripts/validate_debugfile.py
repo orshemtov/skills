@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the stable, provider-neutral parts of Debugfile.yml version 1."""
+"""Validate the stable, provider-neutral frontmatter of Debugfile.md version 1."""
 
 from __future__ import annotations
 
@@ -105,12 +105,23 @@ def check_secrets(value: Any, location: str, errors: list[str]) -> None:
         errors.append(f"{location} looks like an inline secret")
 
 
+def frontmatter(document: str) -> str:
+    lines = document.splitlines()
+    if not lines or lines[0].strip() != "---":
+        raise ValueError("Debugfile.md must start with YAML frontmatter")
+    try:
+        end = next(index for index, line in enumerate(lines[1:], 1) if line.strip() == "---")
+    except StopIteration as exc:
+        raise ValueError("Debugfile.md frontmatter is not closed") from exc
+    return "\n".join(lines[1:end])
+
+
 def validate(path: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     try:
-        data = yaml.safe_load(path.read_text(encoding="utf-8"))
-    except (OSError, yaml.YAMLError) as exc:
+        data = yaml.safe_load(frontmatter(path.read_text(encoding="utf-8")))
+    except (OSError, ValueError, yaml.YAMLError) as exc:
         return [str(exc)], warnings
     if not isinstance(data, dict):
         return ["Debugfile root must be a mapping"], warnings
@@ -188,11 +199,11 @@ def validate(path: Path) -> tuple[list[str], list[str]]:
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("Usage: validate_debugfile.py <path/to/Debugfile.yml>", file=sys.stderr)
+        print("Usage: validate_debugfile.py <path/to/Debugfile.md>", file=sys.stderr)
         return 2
     path = Path(sys.argv[1])
-    if path.name != "Debugfile.yml":
-        print("error: expected a file named Debugfile.yml", file=sys.stderr)
+    if path.name != "Debugfile.md":
+        print("error: expected a file named Debugfile.md", file=sys.stderr)
         return 1
     errors, warnings = validate(path)
     for warning in warnings:

@@ -1,3 +1,4 @@
+---
 version: 1
 
 defaults:
@@ -25,4 +26,8 @@ records:
   destination: null
   instructions: null
   record_when: Severe, recurring, or architecturally informative.
+---
 
+# Debugfile
+
+Add project-specific debugging guidance here.
