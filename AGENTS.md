@@ -32,15 +32,16 @@ Research current, primary documentation for volatile tools and formats. Record p
 Follow the [Agent Skills specification](https://agentskills.io/specification).
 
 ```text
-<skill-name>/
-├── SKILL.md          # required: metadata, decisions, workflow, routing
-├── references/       # optional: detailed or variant-specific knowledge
-├── scripts/          # optional: deterministic or repeated operations
-├── assets/           # optional: templates and files used in outputs
-└── evals/            # optional repo convention: behavioral verification
+skills/
+└── <skill-name>/
+    ├── SKILL.md      # required: metadata, decisions, workflow, routing
+    ├── references/   # optional: detailed or variant-specific knowledge
+    ├── scripts/      # optional: deterministic or repeated operations
+    ├── assets/       # optional: templates and files used in outputs
+    └── evals/        # optional repo convention: behavioral verification
 ```
 
-- Keep every first-party skill in a root-level `<skill-name>/SKILL.md` directory. Do not group skills under category directories. <!-- user-specified -->
+- Keep every first-party skill in `skills/<skill-name>/SKILL.md`. Do not keep first-party skill directories at the repository root. <!-- user-specified -->
 - Treat the directory as a self-contained installable unit. Runtime files must live inside it.
 - Give `SKILL.md` valid YAML frontmatter. `name` must match the directory and use lowercase letters, numbers, and single hyphens.
 - Treat `description` only as the activation router: say what tasks should trigger the skill, using concrete contexts and keywords. Put workflow, rationale, and output details in the body or bundled resources. <!-- user-specified -->
@@ -67,7 +68,7 @@ Keep each meaning in one place. Move detail out of `SKILL.md` when it serves onl
 - Preserve upstream structure, history boundary, source URL, and license.
 - Do not edit vendored files or change/update submodule commits without explicit approval.
 - Do not present a submodule as floating: the parent repository still records an exact commit.
-- If adaptation is needed, keep it in a root-level first-party skill and point to the vendored source only when that remains portable.
+- If adaptation is needed, keep it in a first-party skill under `skills/` and point to the vendored source only when that remains portable.
 
 ## Evaluation and promotion checks
 

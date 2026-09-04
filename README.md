@@ -10,11 +10,11 @@ npx skills@latest add orshemtov/skills
 
 ## Skills
 
-- [`debug`](./debug) — Perform provider-neutral root-cause analysis using a repository `Debugfile.md`.
-- [`writing-for-humans`](./writing-for-humans) — Create concise, scannable documents for human readers.
-- [`research`](./research) — Investigate a decision and produce an evidence-backed report before planning or implementation.
-- [`plan`](./plan) — Turn software ideas into accepted solutions and implementation-ready plans.
-- [`read-the-docs`](./read-the-docs) — Research authoritative technical documentation before planning or implementation.
+- [`debug`](./skills/debug) — Perform provider-neutral root-cause analysis using a repository `Debugfile.md`.
+- [`writing-for-humans`](./skills/writing-for-humans) — Create concise, scannable documents for human readers.
+- [`research`](./skills/research) — Investigate a decision and produce an evidence-backed report before planning or implementation.
+- [`plan`](./skills/plan) — Turn software ideas into accepted solutions and implementation-ready plans.
+- [`read-the-docs`](./skills/read-the-docs) — Research authoritative technical documentation before planning or implementation.
 
 ## Curated upstreams
 
