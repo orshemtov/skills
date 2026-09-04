@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "prompt": "Use /setup-debug for this service. Architecture is partly in docs/ and partly in Confluence; deployments and incidents are in GitHub. Create the Debugfile without storing any credentials.",
+      "prompt": "Set up debugging for this service. Architecture is partly in docs/ and partly in Confluence; deployments and incidents are in GitHub. Create the Debugfile without storing any credentials.",
       "expected_output": "A validated Debugfile.yml built from repository discovery and a bounded interview, using acli with Confluence guidance and gh with GitHub guidance.",
       "files": [],
       "expectations": [
@@ -36,4 +36,3 @@
     }
   ]
 }
-

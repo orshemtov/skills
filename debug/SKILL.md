@@ -1,6 +1,6 @@
 ---
 name: debug
-description: Diagnose software bugs, incidents, and performance regressions with root-cause analysis. Use a repository Debugfile.yml to load architecture and delivery context, route through configured logs, traces, metrics, deployments, databases, and provider CLIs, reproduce safely, test hypotheses, and, when authorized, implement and verify a regression-safe fix. Also use when creating or updating a Debugfile through the setup-debug endpoint.
+description: Diagnose software bugs, incidents, and performance regressions with root-cause analysis, or create and update a repository Debugfile.yml. Use project context and configured evidence channels to reproduce safely, test hypotheses, and, when authorized, implement and verify a regression-safe fix.
 ---
 
 # Debug
@@ -11,7 +11,7 @@ Find the causal chain behind the reported behavior. Treat a plausible code path 
 
 | Request | Mode |
 | --- | --- |
-| Invoked by `setup-debug`, or asks to create/update debugging configuration | Setup |
+| Asks to create or update debugging configuration | Setup |
 | Reports broken, incorrect, failing, flaky, or slow behavior | Diagnose |
 
 Both modes use [references/debugfile.md](references/debugfile.md). Read its Setup section and use [assets/Debugfile.yml](assets/Debugfile.yml) only in Setup mode; otherwise read the discovery, routing, and safety sections as needed.
